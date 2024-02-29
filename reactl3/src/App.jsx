@@ -1,20 +1,38 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
+import { Home, Products } from "./Pages";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+import Loader from "./components/Loader";
+import { Highlights } from "./Pages";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
 
   return (
     <BrowserRouter>
       <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        {/* <Route path="/contact" element={<Contact />} />
-        <Route path="/services" element={<Services />} /> */}
-      </Routes>
+      {loading ? (
+        <Loader /> // Render the Loader component while the page is loading
+      ) : (
+        <>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/highlights" element={<Highlights />} />
+          </Routes>
+
+          <Footer />
+        </>
+      )}
     </BrowserRouter>
   );
 }

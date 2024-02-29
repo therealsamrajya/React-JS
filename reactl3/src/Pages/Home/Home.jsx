@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Carousel from "./Carousel";
+import Carousel from "../../components/Carousel";
+import GamesRank from "../../components/GamesRank";
+import Testimonials from "../../components/Testimonials";
+import PlanCard from "../../components/PlanCard";
 
 const Home = () => {
   const [textIndex, setTextIndex] = useState(0);
@@ -15,7 +18,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className="w-full h-full flex flex-col justify-center  items-center ">
+      <div className="w-full h-full flex flex-col justify-center  items-center mx-auto lg:px-6 ">
         <h1 className="text-3xl lg:mr-auto  font-palanquin font-bold mt-6 text-primary  ">
           <span>WELCOME TO</span>
           <span>{texts[textIndex]}</span>
@@ -24,7 +27,13 @@ const Home = () => {
           YOUR GAMING JOURNEY STARTS HERE.
         </span>
       </div>
-      <Carousel />
+      <div className="w-full px-6 lg:w-[70%]">
+        <Carousel />
+      </div>
+
+      <GamesRank />
+      <PlanCard />
+      <Testimonials />
     </div>
   );
 };

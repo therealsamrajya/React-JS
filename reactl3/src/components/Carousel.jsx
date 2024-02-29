@@ -11,13 +11,13 @@ const Carousel = () => {
       image: fifaa,
       title: "FC24",
       description: "Immerse yourself into the World of Competitve football",
-      url: "https://example.com/page1", // URL for Image 1
+      url: "https://example.com/page1",
     },
     {
       image: gow,
       title: "God of War : Ragnarok",
       description: "Embrace the winter as the judgment is there",
-      url: "https://example.com/page2", // URL for Image 2
+      url: "https://example.com/page2",
     },
     // Add more slides as needed
   ];
@@ -45,7 +45,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="w-full lg:w-[70%]">
+    <div>
       <Slider {...settings}>
         {slides.map((slide, index) => (
           <div className="relative" key={index}>
