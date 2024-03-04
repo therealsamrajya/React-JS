@@ -22,10 +22,11 @@ const MyForm = () => {
 
   return (
     <form
-      className="max-w-sm mx-auto lg:ml-5  text-primary font-palanquin"
+      className="max-w-sm mx-auto lg:ml-5 border  text-primary font-palanquin mb-2"
       onSubmit={handleSubmit}>
       <div className="mb-5">
-        <label htmlFor="name" className="block mb-2 text-sm font-medium">
+        <h1 className="font-bold ">SIGN UP!</h1>
+        <label htmlFor="name" className="block mb-2 text-sm font-medium ">
           Name
         </label>
         <input
@@ -50,7 +51,6 @@ const MyForm = () => {
           type="email"
           id="email"
           name="email"
-          className=""
           placeholder="username@gmail.com"
           value={values.email}
           onChange={handleChange}
