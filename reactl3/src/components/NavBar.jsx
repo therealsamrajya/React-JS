@@ -18,6 +18,9 @@ const NavBar = () => {
       <Link className=" hover:text-second" to="/highlights">
         Highlights
       </Link>
+      <Link className=" hover:text-second" to="/aboutus">
+        AboutUs
+      </Link>
       <div className="ml-auto">
         <input
           className="rounded-lg "

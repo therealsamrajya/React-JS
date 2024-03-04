@@ -6,13 +6,9 @@ const VideoCarousel = () => {
   const videoUrls = [
     {
       url: "https://youtu.be/-eTMqXZlXSw?si=5xpNvdPV3gfJBUWS",
-      title: "LAST MAN STANDING!!",
-      description: "Sen Jellesi 1v3 against G2",
     },
     {
       url: "https://youtu.be/LfXKFPRBGAY?si=fva5T5hjs6drvsb-",
-      title: "BEST LORD STEAL",
-      description: "Lord Steal by Albertt in MPL ID",
     },
   ];
 
@@ -28,23 +24,22 @@ const VideoCarousel = () => {
 
   return (
     <div
-      className="bg-one text-2xl uppercase"
+      className="bg-primary text-2xl uppercase text-second"
       style={{ width: "100%", overflow: "hidden" }}>
+      <h1 className="lg:text-4xl text-3xl font-bold ">
+        Upload your greatness now!
+      </h1>
+      <p>Upload your Highlights today!</p>
+
       <Slider {...settings} style={{ maxWidth: "100%", overflow: "hidden" }}>
         {videoUrls.map((video) => (
           <div key={video.url}>
             <ReactPlayer
               url={video.url}
               width="100%"
-              height={`calc(100vw * (${(0.6 * 9) / 16}))`}
+              height={`calc(80vw * (${(0.5 * 1) / 1}))`}
               controls
             />
-            <h2 className="font-bold font-palanquin text-primary">
-              {video.title}
-            </h2>
-            <p className="font-bold font-palanquin text-primary ">
-              {video.description}
-            </p>
           </div>
         ))}
       </Slider>

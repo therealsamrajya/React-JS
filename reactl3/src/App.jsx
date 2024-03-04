@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home, Products } from "./Pages";
+import { AboutUs, Home, Products } from "./Pages";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
@@ -28,6 +28,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
             <Route path="/highlights" element={<Highlights />} />
+            <Route path="/aboutus" element={<AboutUs />} />
           </Routes>
 
           <Footer />
