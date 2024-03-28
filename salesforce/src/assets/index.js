@@ -1,3 +1,3 @@
 import headerLogo from "./header-logo.png";
-
-export { headerLogo };
+import testImg from "./test.png";
+export { headerLogo, testImg };

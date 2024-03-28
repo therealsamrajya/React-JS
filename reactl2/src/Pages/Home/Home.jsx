@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { shoe1, shoe2, shoe3 } from "../../assets/assets";
 import { Button } from "../../components";
+import { statistics } from "..";
 
 const images = [
   {
@@ -61,6 +62,16 @@ const Home = () => {
               );
             })}
           </div>
+        </div>
+        <div className="flex justify-start items-start flex-wrap   gap-16 -bottom-[18%] sm:left-[4%] max-sm:px-6 absolute">
+          {statistics.map((stat) => (
+            <div key={stat.value}>
+              <p className="text-4xl font-palanquin font-bold">{stat.value}</p>
+              <p className="font-montserrat leading-7 text-slate-gray">
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

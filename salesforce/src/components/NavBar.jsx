@@ -4,6 +4,7 @@ import { FaSalesforce, FaAngleDown } from "react-icons/fa";
 import { IoMdSearch } from "react-icons/io";
 import { RiEarthFill } from "react-icons/ri";
 import { FaUser } from "react-icons/fa";
+import Button from "./Button/Button";
 const menu = [
   {
     id: 1,
@@ -53,8 +54,8 @@ const NavBar = () => {
   };
 
   return (
-    <div className="">
-      <div className="flex flex-row items-center w-3/6 justify-between ml-[-3%] mt-[-2%] space-x-8">
+    <div className="w-full py-3 bg-white sticky top-0 border">
+      <div className="w-11/12 mx-auto flex items-center gap-x-7 h-full">
         <NavLink to="/">
           <FaSalesforce className="w-[12vh] h-[12vh]" />
           <span className="hidden">Home </span>
@@ -91,27 +92,26 @@ const NavBar = () => {
             </div>
           )}
         </div>
-        <div className="font-sans flex flex-col items-center  ">
+        <div className="font-sans flex flex-col items-center  w-fit px-7 ">
           <a
             href="#"
-            className="text-md underline truncate px-[13vh]  text-secondary">
+            className="underline text-center truncate  text-secondary">
             Contact Us
           </a>
-          <h3 className="text-primary text-md font-sans">
+          <h3 className="text-primary text-base text-center font-sans">
             +65 6302 5700 (Intl)
           </h3>
         </div>
-        <div>
-          <IoMdSearch className="w-6 h-6" />
-        </div>
-        <div>
-          <RiEarthFill className="w-6 h-6 " />
-        </div>
+
+        <IoMdSearch className="w-6 h-6" />
+
+        <RiEarthFill className="w-6 h-6 " />
+
         <div
           className="relative"
           onMouseEnter={handleMouseEnter1}
           onMouseLeave={handleMouseLeave1}>
-          <button className="text-primary font-sans font-semibold hover:text-secondary focus:outline-none flex items-center">
+          <button className="text-primary font-sans font-semibold hover:text-secondary focus:outline-none flex gap-x-1 items-center">
             <FaUser className="ml-1" />
             Login
           </button>
@@ -147,11 +147,10 @@ const NavBar = () => {
             </div>
           )}
         </div>
-        <div class="flex">
-          <button class="bg-green-700 hover:bg-green-950 text-white font-bold py-1 px-2 whitespace-nowrap rounded w-[20vh] h-[7vh]">
-            Try for Free
-          </button>
-        </div>
+        <Button
+          value="Try for Free"
+          className="w-fit px-5 py-3 rounded-lg text-white font-medium bg-green-700"
+        />
       </div>
     </div>
   );
